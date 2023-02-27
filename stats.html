@@ -29,18 +29,20 @@
                     <img src="./assets/bx-menu.svg" alt="open menu">
                 </button>
                 <ul class="menu">
+                    <button class="close-menu" aria-label="Close menu">
+                        <img src="./assets/bx-window-close.svg" alt="close menu">
+                    </button>
                     
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./upcoming_events.html">Upcoming Events</a></li>
                     <li><a href="./past_events.html">Past Events</a></li>
                     <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./details.html">Details</a></li>
                     <li><a class="active" href="#">Stats</a></li>
                 </ul>
             </div>
         </div>
     </header>
-    <main>
+    <main class="states">
         <div class="container-slider">
             <div class="slider" id="slider">
                 <div class="slider_section">
@@ -145,13 +147,18 @@
             <div class="redsocial">
             <a class="redsoc" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
             <a class="redsoc" href="https://Instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a>
-            <a class="redsoc" href="https://whatsapp"><i class='bx bxl-whatsapp' style='color:white'></i></a>
+            <a class="redsoc" href="https://whatsapp"><i class='bx bxl-whatsapp'></i></a>
             </div>
+            <div class="footer_logo">
+                <img src="./assets/LogoAmazingEvents.png" alt="amazingEvents">
+                </div>
             <div class="parr">
-                <p>Cohort</p>
+                <p>FE09-TT</p>
             </div>            
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/stats.js"></script>
+    <script src="./scripts/menu.js"></script>
 </body>
 </html>
