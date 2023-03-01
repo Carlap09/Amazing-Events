@@ -1,21 +1,19 @@
 const cardsContainer = document.getElementById("cards");
-const currentDate = setDate(data.currentDate);
+const currentDate = data.currentDate;
 const cardsGenerated = createCards(data.events);
 
 
 
-function setDate(date) {
-    const reg = /[-]/g;
-    const dateOk = new Date(date.replace(reg, ','));
-    return dateOk.getTime();
-}
 
+function isDateBeforeCurrentDate(date) {
+    return new Date(date.toString()) < new Date(currentDate.toString())  
+}
 
 function createCards(arrayDataEvents) {
     let cardContent = ``;
     for (const event of arrayDataEvents) {
-        const eventDate = setDate(event.date);
-        if (eventDate < currentDate) {
+        const eventDate = event.date;
+        if (isDateBeforeCurrentDate(eventDate)) {
             cardContent += `
             <div class="cardEvents">
             <div  class="events__img">
