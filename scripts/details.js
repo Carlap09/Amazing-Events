@@ -1,10 +1,11 @@
-const cardsContainer = document.getElementById("cards");
-const cardsGenerated = createCards(data.events);
+const contentCard = document.querySelector("#card");
+let params = (new URL(document.location)).searchParams;
+let cardId = params.get("id");
 
-
-function createCards(arrayDataEvents) {
+function createCard(arrayDataEvents, id) {
     let cardContent = ``;
-    for (const event of arrayDataEvents) {
+    const event = arrayDataEvents.find(event => event._id == id)
+        const eventDate = event.date;    
         cardContent += `
         <div class="details">
             
@@ -25,8 +26,8 @@ function createCards(arrayDataEvents) {
                 </div>
             </div>        
         </div>`;
-    }
-    return cardContent;
+        return cardContent
 }
 
-cardsContainer.innerHTML = cardsGenerated;
+
+contentCard.innerHTML = createCard(data.events, cardId)
