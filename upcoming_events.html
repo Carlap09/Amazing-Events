@@ -54,36 +54,44 @@
             </div>
         </div>
         <div class="container-form">
-            <form action="show_data.html" method="get">
+            
+            <form id="formCategory">
+                
                 <fieldset class="categ">
                     <label for="FoodFair" class="category">
-                        <input  id="FoodFair" type="checkbox" name="FoodFair" value="Category">Food Fair
+                        <input  id="FoodFair" type="checkbox" name="FoodFair" value="Food Fair">Food Fair
                     </label>
                     <label for="Museum" class="category">
-                        <input  id="Museum" type="checkbox" name="Museum" value="Category">Museum
+                        <input  id="Museum" type="checkbox" name="Museum" value="Museum">Museum
                     </label>
                     <label for="CostumeParty" class="category">
-                        <input id="CostumeParty" type="checkbox" name="CostumeParty" value="Category">Costume Party
+                        <input id="CostumeParty" type="checkbox" name="CostumeParty" value="Costume Party">Costume Party
                     </label>
                     <label for="MusicConcert" class="category">
-                        <input id="MusicConcert" type="checkbox" name="MusicConcert" value="Category">Music Concert
+                        <input id="MusicConcert" type="checkbox" name="MusicConcert" value="Music Concert">Music Concert
                     </label>
                     <label for="Race" class="category">
-                        <input id="Race" type="checkbox" name="Race" value="Category">Race
+                        <input id="Race" type="checkbox" name="Race" value="Race">Race 
                     </label>
                     <label for="BookExchange" class="category">
-                        <input id="BookExchange" type="checkbox" name="BookExchange" value="Category">Book Exchange
+                        <input id="BookExchange" type="checkbox" name="BookExchange" value="Book Exchange" >Book Exchange
                     </label>
                     <label for="Cinema" class="category">
-                        <input id="Cinema" type="checkbox" name="Cinema" value="Category">Cinema
+                        <input id="Cinema" type="checkbox" name="Cinema" value="Cinema" >Cinema
                     </label>
-                    <label for="seeker" class="seeker"></label>
-                    <input type="text" id="seeker" name="seeker">
-                    <input type="submit" id="button" value=".">
+                    
                 </fieldset>
+                <div style="padding: 16px 32px; color: #d40d5a; font-weight: 700" id="filterMessage">The Category has not been selected</div>
             </form>
+        <div class="search">
+            <div class="search-input">
+                <i class="fas fa-search"></i>
+                <input type="search"  placeholder="Search events..." id="searchEvents">
+            </div>
+            </div>
         </div>
-        <hr>
+            <hr>   
+        
         <div class="container">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4" id="cards"></div>
         </div>
