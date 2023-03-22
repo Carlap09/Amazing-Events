@@ -13,6 +13,10 @@ a{
     text-decoration: none;
 }
 
+hr {
+    border-color:var(--primary-color);
+}
+
 :root{
     --theme-color:white;
     --primary-color:#d40d5a;
@@ -324,6 +328,23 @@ margin-left: 90px;
     margin-top:40px;
     padding: 10px 10px 10px 10px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    
+}
+
+.tableStatistics{
+    width: 80%;
+    
+}
+
+.table1{
+    width: 80%;
+    text-align: center;
+    background-image: url(../assets/banner.jpg);
+    color: var(--text-color-inverse);
+    padding: 10px;
 }
 
 .states{
@@ -347,6 +368,7 @@ th,
 td {
 
     border: 2px solid black !important;
+    text-align: center;
 }
 th{
     background-color: var(--primary-color);
@@ -355,7 +377,7 @@ th{
 }
 
 td {
-    padding: 10px;
+    padding: 0px;
 }
 
 /*footer*/
