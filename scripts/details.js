@@ -2,10 +2,26 @@ const contentCard = document.querySelector("#card");
 let params = (new URL(document.location)).searchParams;
 let cardId = params.get("id");
 
+let eventsAll = [];
+
+
+function fetchData() {
+    fetch("https://mindhub-xj03.onrender.com/api/amazing")
+    //fetch('../data.json')
+        .then((response) => response.json())
+        .then((dataEvents) => {
+            currentDate = dataEvents.currentDate;
+            eventsAll = dataEvents.events;
+            contentCard.innerHTML = createCard(eventsAll, cardId) 
+    })
+        .catch((error) => console.log(error.message));
+}
+    fetchData();
+
+
 function createCard(arrayDataEvents, id) {
-    let cardContent = ``;
+    let cardContent = ``; 
     const event = arrayDataEvents.find(event => event._id == id)
-        const eventDate = event.date;    
         cardContent += `
         <div class="details">
             
@@ -30,4 +46,3 @@ function createCard(arrayDataEvents, id) {
 }
 
 
-contentCard.innerHTML = createCard(data.events, cardId)
